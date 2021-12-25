@@ -1,0 +1,12 @@
+version: "3"
+services:
+    node-app:
+      image: node:stretch-slim
+      container_name: node-app
+      hostname: node-app
+      ports:
+        - "3000:3000"
+      working_dir: "/app"
+      volumes:
+        - "$PWD/app:/app"
+      command: "yarn start"
