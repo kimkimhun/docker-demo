@@ -1,0 +1,12 @@
+version: "3"
+services:
+  go-app:
+    image: veckenz/go-app:0.0.5
+    build:
+      context: .
+      dockerfile: Dockerfile.multistage
+    container_name: go-app
+    hostname: go-app
+    ports:
+      - 8080:8080
+    restart: always
